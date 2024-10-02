@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電影約會交友平台</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>電影約會交友平台</h1>
+    </header>
+    <main>
+        <section id="login">
+            <button id="liffLoginButton">使用LINE登入</button>
+        </section>
+        <section id="userProfile" style="display: none;">
+            <!-- 用戶資料將在這裡顯示 -->
+        </section>
+        <section id="userPreferences" style="display: none;">
+            <h2>設置您的電影偏好</h2>
+            <form id="preferencesForm">
+                <label for="age">年齡:</label>
+                <input type="number" id="age" name="age" required>
+                
+                <label for="location">所在地區:</label>
+                <input type="text" id="location" name="location" required>
+                
+                <label for="favoriteGenres">喜愛的電影類型 (可多選):</label>
+                <select id="favoriteGenres" name="favoriteGenres" multiple required>
+                    <option value="action">動作</option>
+                    <option value="comedy">喜劇</option>
+                    <option value="drama">劇情</option>
+                    <option value="scifi">科幻</option>
+                    <!-- 可以添加更多類型 -->
+                </select>
+                
+                <label for="favoriteDirectors">喜愛的導演 (用逗號分隔):</label>
+                <input type="text" id="favoriteDirectors" name="favoriteDirectors">
+                
+                <label for="favoriteActors">喜愛的演員 (用逗號分隔):</label>
+                <input type="text" id="favoriteActors" name="favoriteActors">
+                
+                <button type="submit">保存偏好</button>
+            </form>
+        </section>
+        <section id="movieList" style="display: none;">
+            <!-- 電影列表將在這裡顯示 -->
+        </section>
+    </main>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

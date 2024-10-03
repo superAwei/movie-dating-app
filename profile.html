@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>建立個人檔案 - 電影約會交友平台</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <section id="profileSettings" class="fullscreen-section">
+            <h2>建立個人檔案</h2>
+            <form id="profileForm">
+                <div class="form-group">
+                    <label for="nickname">暱稱：</label>
+                    <input type="text" id="nickname" name="nickname" required>
+                </div>
+                <div class="form-group">
+                    <label>喜歡的電影類型：</label>
+                    <div id="movieGenres">
+                        <!-- 這裡將動態添加電影類型選項 -->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="avatar">上傳大頭照：</label>
+                    <input type="file" id="avatar" name="avatar" accept="image/*">
+                    <img id="avatarPreview" src="#" alt="大頭照預覽" style="display: none; max-width: 100px; max-height: 100px;">
+                </div>
+                <div class="form-group">
+                    <label>想找的關係：</label>
+                    <div id="relationshipTypes">
+                        <span class="relationship-tag" data-value="friend">朋友</span>
+                        <span class="relationship-tag" data-value="romantic">男女朋友</span>
+                        <span class="relationship-tag" data-value="any">無特定關係</span>
+                    </div>
+                </div>
+                <button type="submit">建立檔案</button>
+            </form>
+        </section>
+    </div>
+    <script src="profile.js"></script>
+</body>
+</html>
